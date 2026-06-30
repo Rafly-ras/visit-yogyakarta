@@ -1,0 +1,187 @@
+/* Variables based on requested color palette */
+:root {
+    --primary-color: #7a4628; /* Batik Brown */
+    --secondary-color: #c5a059; /* Kraton Gold */
+    --accent-color: #424242; /* Volcano Grey */
+    --bg-color: #f9f9f5; /* Canvas White */
+    --dark-mode: #1a1a24; /* Night Sky */
+    --text-color: #333333;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6, .font-playfair, .navbar-brand {
+    font-family: 'Playfair Display', serif;
+}
+
+.text-primary-custom { color: var(--primary-color) !important; }
+.text-secondary-custom { color: var(--secondary-color) !important; }
+.bg-primary-custom { background-color: var(--primary-color) !important; }
+.bg-secondary-custom { background-color: var(--secondary-color) !important; }
+
+/* Navbar Styles */
+.navbar {
+    transition: all 0.3s ease-in-out;
+    padding: 1.5rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: var(--dark-mode);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--accent-color);
+    margin: 0 0.5rem;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    color: var(--primary-color);
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 0;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    padding: 0.8rem 0;
+}
+
+/* Buttons */
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+    padding: 0.6rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--dark-mode);
+    border-color: var(--dark-mode);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-outline-custom {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.6rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    min-height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1596404746372-911e8a60da11?q=80&w=2000&auto=format&fit=crop') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+/* Cards & Image Hover */
+.feature-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    background: #fff;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.card-img-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img-wrapper img {
+    transition: transform 0.6s ease;
+}
+
+.feature-card:hover .card-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.glass-badge {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.35em 0.65em;
+}
+
+/* Footer Links */
+footer .footer-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+    line-height: 2;
+}
+
+footer .footer-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: #fff;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,34 @@
+{
+  "destinations": [
+    {
+      "id": "dst_01",
+      "name": {
+        "id": "Candi Prambanan",
+        "en": "Prambanan Temple"
+      },
+      "category": "Sejarah",
+      "image_url": "assets/img/destinations/prambanan.jpg",
+      "short_desc": {
+        "id": "Kompleks candi Hindu terbesar di Indonesia.",
+        "en": "The largest Hindu temple complex in Indonesia."
+      },
+      "location": "https://maps.google.com/?q=Prambanan",
+      "price_estimate": "Rp 50.000 - Rp 350.000"
+    },
+    {
+      "id": "dst_02",
+      "name": {
+        "id": "Jalan Malioboro",
+        "en": "Malioboro Street"
+      },
+      "category": "Ikon",
+      "image_url": "assets/img/destinations/malioboro.jpg",
+      "short_desc": {
+        "id": "Pusat perbelanjaan ikonik dan jantung kota Yogyakarta.",
+        "en": "The iconic shopping district and heart of Yogyakarta."
+      },
+      "location": "https://maps.google.com/?q=Malioboro",
+      "price_estimate": "Bervariasi (Varied)"
+    }
+  ]
+}
